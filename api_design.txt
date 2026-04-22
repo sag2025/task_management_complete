@@ -1,0 +1,43 @@
+### API DESIGN FOR THE WEBSITE 
+since the website manages user task , it has all crud related api (get,delete,post,put).we will see all parts in details
+###
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### LOGIN PART
+since the login part will take user data to server , we need a body although we normally use post when we change something in our database , here we are not changing 
+anything , but we are also not getting any data back , so we cant use get . so the best is post
+------------->POST  api/users/login
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### REGISTER PART
+this is simple as we are sending data and updating in database 
+------------->POST api/users/register
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### GETTING TASKS 
+### GETTING ALL TASKS
+WE HAVE USED GET METHOD TO FETCH ALL TASKS
+--------------> GET api/tasks/
+
+### GETTING TASKS ON BASIS ON QUERY 
+SINCE WE IMPLEMENTED FILTER FEATURES ON OUR WEBSITE TO GET BASED ON FILTERS WE NEED QUERY PARAMETERS
+-------------> GET api/tasks/?category=personal&tags=dangerous+smooth
+
+### GETTING TASKS ON USER ID 
+WE HAVE USED HERE DYNAMIC ROUTING CONCEPT
+------------>  GET api/tasks/:id
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### UPDATING TASKS
+SO THE QUESTION WE HAVE TO UPDATE THE TASK NORMALLY AND ALSO IN SECOND ASSIGNMENT THEY ADDED TO UPDATE BASED ON TAGS AND CATEGORY ,
+BUT SINCE BOTH FEATURES ARE SIMPLE UPDATE ONLY IN BOTH CASES WE HAVE ONE API FOR CLARITY
+--------------> PUT api/tasks/:id
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+### DELETING TASKS
+WE HAVE NORMAL DELETE METHOD FOR DELETING A TASK BASED ON TASK_ID
+------------> DELETE api/tasks/:id
