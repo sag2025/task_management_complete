@@ -82,3 +82,7 @@ cd frontend
 npm install
 ### STEP 3
 npm run dev
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ### A SHORT VIDEO OF FRONTEND AND UI WORKING OF WEBSITE 
+ ### LINK --------->https://drive.google.com/file/d/1COCyvreDSntVdKY_-gLtz-H5CuILQFdO/view?usp=sharing
